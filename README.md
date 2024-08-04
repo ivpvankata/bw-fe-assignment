@@ -41,7 +41,6 @@ This project involved recreating a Figma design as a responsive web page using m
   - `Image.module.scss`
   - `Widget.module.scss`
   - `WidgetList.module.scss`
-  - `Home.module.scss`
 
 ## Challenges Faced and Solutions
 
