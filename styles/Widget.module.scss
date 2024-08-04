@@ -1,0 +1,125 @@
+@import './global/_variables.scss';
+@import './global/_mixins.scss';
+
+/* ------------------------------------------------------------ *\
+	Widget
+\* ------------------------------------------------------------ */
+
+.widget {
+	padding: 16px 70px 16px 16px;
+	box-shadow: $box-shadow-base;
+	border-radius: $border-radius-base;
+
+	@include breakpoint-down(small-desktop) {
+		padding: 16px 35px 16px 16px;
+	}
+
+	@include breakpoint-down(tablet) {
+		padding: 16px;
+	}
+
+	.widgetCols,
+	.widgetInner {
+		display: flex;
+		// flex-wrap: wrap;
+		align-items: center;
+
+		@include breakpoint-down(tablet) {
+			flex-wrap: wrap;
+			align-items: flex-start;
+		}
+	}
+
+	.widgetCols {
+		flex: auto;
+
+		@include breakpoint-down(tablet) {
+			flex: 1;
+		}
+
+		@include breakpoint-down(mobile) {
+			text-align: center;
+		}
+	}
+
+	.widgetCol:nth-child(1) {
+		flex: 0 0 270px;
+		max-width: 270px;
+
+		@include breakpoint-down(small-desktop) {
+			flex: 0 0 245px;
+			max-width: 245px;
+		}
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			margin: 0 0 30px;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: 0 0 18px;
+		}
+	}
+
+	.widgetCol:nth-child(2) {
+		flex: 0 0 210px;
+		max-width: 210px;
+
+		@include breakpoint-down(small-desktop) {
+			flex: 0 0 160px;
+			max-width: 160px;
+		}
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}
+	}
+
+	.widgetCols > * {
+		padding: 0 30px;
+
+		@include breakpoint-down(small-desktop) {
+			padding: 0 12px;
+		}
+	}
+
+	.widgetActions {
+		flex: 0 1 306px;
+		max-width: 306px;
+		margin-left: 60px;
+
+		@include breakpoint-down(small-desktop) {
+			padding-left: 66px;
+			flex: 0 0 256px;
+			max-width: 256px;
+		}
+
+		@include breakpoint-down(tablet) {
+			flex: 0 0 100%;
+			max-width: 100%;
+			padding: 0;
+			margin: 25px 0 0;
+		}
+
+		@include breakpoint-down(mobile) {
+			margin: 21px 0 0;
+		}
+
+		a {
+			display: block;
+
+			@include breakpoint-down(tablet) {
+				max-width: 660px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			@include breakpoint-down(mobile) {
+				flex: 0 0 100%;
+				max-width: 100%;
+			}
+		}
+	}
+}
