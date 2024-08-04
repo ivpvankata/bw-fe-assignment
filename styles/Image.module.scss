@@ -1,0 +1,63 @@
+@import './global/_variables.scss';
+@import './global/_mixins.scss';
+
+/* ------------------------------------------------------------ *\
+	Widget image
+\* ------------------------------------------------------------ */
+
+.widgetImage {
+	flex: 0 0 289px;
+	max-width: 289px;
+	height: 133px;
+	margin-right: 30px;
+
+	@include breakpoint-down(small-desktop) {
+		flex: 0 0 225px;
+		max-width: 225px;
+		height: 103px;
+		margin-right: 12px;
+	}
+
+	@include breakpoint-down(tablet) {
+		flex: 0 0 289px;
+		max-width: 289px;
+		height: 162px;
+		margin-right: 24px;
+	}
+
+	@include breakpoint-down(mobile) {
+		flex: 0 0 100%;
+		max-width: 100%;
+		height: 133px;
+		margin: 0 0 20px;
+	}
+
+	> a {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+		overflow: hidden;
+
+		img {
+			width: 133px;
+			height: 100%;
+			object-fit: contain;
+			transition: transform 1s;
+
+			@include breakpoint-down(small-desktop) {
+				width: 103px;
+			}
+
+			@include breakpoint-down(tablet) {
+				width: 133px;
+			}
+
+			&:hover {
+				@include breakpoint-up(tablet) {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
