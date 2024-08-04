@@ -1,0 +1,29 @@
+@import './global/_variables.scss';
+@import './global/_mixins.scss';
+
+/* ------------------------------------------------------------ *\
+	Widget list
+\* ------------------------------------------------------------ */
+
+.widgetList {
+	padding: 60px 0;
+
+	> div > ul {
+		list-style-type: none;
+	}
+
+	> div > ul > li + li {
+		margin-top: 20px;
+	}
+
+	.widgetListTitle {
+		font-size: 24px;
+		font-weight: 700;
+		color: $gray;
+		margin: 0 0 19px;
+
+		@include breakpoint-down(small-desktop) {
+			margin: 0 0 15px;
+		}
+	}
+}
