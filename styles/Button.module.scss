@@ -1,0 +1,33 @@
+@import './global/_variables.scss';
+@import './global/_mixins.scss';
+
+/* ------------------------------------------------------------ *\
+	Widget button
+\* ------------------------------------------------------------ */
+
+.widgetButton {
+	display: inline-block;
+	border-radius: $border-radius-md;
+	background-color: $green;
+	color: $white;
+	text-align: center;
+	padding: 18px;
+	font-size: 20px;
+	font-weight: 700;
+	text-decoration: none;
+	border: 2px solid $green;
+	transition:
+		background-color $trs,
+		color $trs;
+
+	@include breakpoint-down(mobile) {
+		font-size: 18px;
+	}
+
+	&:hover {
+		@include breakpoint-up(tablet) {
+			background-color: $white;
+			color: $base;
+		}
+	}
+}
