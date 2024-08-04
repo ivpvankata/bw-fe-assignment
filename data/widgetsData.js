@@ -1,0 +1,40 @@
+const widgetsData = [
+	{
+		id: 1,
+		imageSrc: '/images/image1.jpg',
+		backgroundColor: '#03252B',
+		title: 'Casino 1',
+		title_url: 'https://www.example1.com',
+		rating: 4,
+		bonus: 'Bonus$',
+		betAmount: 'Bet 10$',
+		getAmount: 'Get 500$',
+		button_url: 'https://www.example1.com',
+	},
+	{
+		id: 2,
+		imageSrc: '/images/image2.jpg',
+		backgroundColor: '#43082F',
+		title: 'Casino 2',
+		title_url: 'https://www.example2.com',
+		rating: 5,
+		bonus: 'Bonus',
+		betAmount: 'Bet 20$',
+		getAmount: 'Get 600$',
+		button_url: 'https://www.example1.com',
+	},
+	{
+		id: 3,
+		imageSrc: '/images/image3.jpg',
+		backgroundColor: '#03252B',
+		title: 'Casino 3',
+		title_url: 'https://www.example3.com',
+		rating: 3,
+		bonus: 'Bonus$',
+		betAmount: 'Bet 10$',
+		getAmount: 'Get 500$',
+		button_url: 'https://www.example1.com',
+	},
+];
+
+export default widgetsData;
