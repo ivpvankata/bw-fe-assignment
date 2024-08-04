@@ -1,0 +1,143 @@
+/* ------------------------------------------------------------ *\
+    Base
+\* ------------------------------------------------------------ */
+
+body {
+    min-width: 320px;
+    background: #fff;
+    font-family: $ff-ss;
+    font-weight: $font-weight-base;
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    color: $base;
+    letter-spacing: 0;
+}
+
+a:not([class]) {
+    color: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: none;
+        color: $base;
+    }
+
+    &[href^='tel'] {
+        text-decoration: none;
+    }
+
+    &[href^='mailto'] {
+        text-decoration: none;
+    }
+}
+
+.hull {
+    max-width: calc(#{$hull-max-width} + #{$hull-gutter} * 2);
+    padding-left: $hull-gutter;
+    padding-right: $hull-gutter;
+    margin: auto;
+    width: 100%;
+
+    @include breakpoint-down(tablet) {
+        max-width: calc(#{$hull-max-width} + #{$hull-gutter-t} * 2);
+        padding-left: $hull-gutter-t;
+        padding-right: $hull-gutter-t;
+    }
+
+    @include breakpoint-down(mobile) {
+        max-width: calc(#{$hull-max-width} + #{$hull-gutter-m} * 2);
+        padding-left: $hull-gutter-m;
+        padding-right: $hull-gutter-m;
+    }
+}
+
+a,
+button,
+input[type='submit'],
+input[type='button'] {
+    transition:
+        color $trs,
+        background-color $trs,
+        opacity $trs,
+        transform $trs,
+        box-shadow $trs,
+        text-shadow $trs,
+        border $trs,
+        letter-spacing $trs;
+}
+
+figure {
+    margin: 0;
+}
+
+.h1,
+h1,
+.h2,
+h2,
+.h3,
+h3,
+.h4,
+h4,
+.h5,
+h5,
+.h6,
+h6 {
+    margin-bottom: calc(#{$line-height-base}em / 2);
+    line-height: $line-height-base;
+}
+
+.h1,
+h1 {
+    font-size: 28px;
+}
+
+.h2,
+h2 {
+    font-size: 27px;
+}
+
+.h3,
+h3 {
+    font-size: 26px;
+}
+
+.h4,
+h4 {
+    font-size: 25px;
+}
+
+.h5,
+h5 {
+    font-size: 24px;
+}
+
+.h6,
+h6 {
+    font-size: 20px;
+}
+
+p,
+ul,
+ol,
+dl,
+hr,
+table,
+blockquote {
+    margin-bottom: #{$line-height-base}em;
+}
+
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+ul:last-child,
+ol:last-child,
+dl:last-child,
+table:last-child,
+blockquote:last-child {
+    margin-bottom: 0;
+}

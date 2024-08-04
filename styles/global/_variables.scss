@@ -1,0 +1,35 @@
+$font-size-base: 16px;
+$font-weight-base: 400;
+$line-height-base: 1.2;
+
+$ff-ss: Montserrat, Arial, sans-serif;
+
+$trs: 0.4s;
+$trs-slow: 1s;
+
+$hull-max-width: 1220px;
+$hull-gutter: 60px;
+$hull-gutter-t: 30px;
+$hull-gutter-m: 20px;
+
+$black: #000;
+$white: #fff;
+$base: $black;
+$gray: #939393;
+$green: #009129;
+
+$box-shadow-base: 0px 0px 20px 0px #0000001a;
+$border-radius-base: 4px;
+$border-radius-md: 10px;
+
+$responsive-ios: 812px;
+
+$breakpoints: (
+	mobile-small: 374px,
+	mobile-medium: 575px,
+	mobile: 744px,
+	admin-bar: 782px,
+	tablet: 1023px,
+	small-desktop: 1280px,
+	large-desktop: 1430px,
+);
